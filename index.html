@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glyphs</title>
+  <style>
+    body { margin: 20px; font-family: Arial; }
+    table { border-collapse: collapse; margin: 0 auto; }
+    td { border: 1px solid #eee; text-align: center; padding: 10px; font-size: 48px; }
+  </style>
+</head>
+<body>
+  <table id="t"></table>
+  <script>
+    const glyphs = [
+      'ꔁ', 'ꕉ', 'မ', 'ሐ', 'ߒ', 'ᚠ', 'ជ', 'ដ',
+      'ত', 'ও', 'ஐ', 'ᄎ', 'ᄒ', '𐒂', 'จ', 'ซ',
+      '𐎦', '𐎩', 'ສ', 'ᨂ', 'ᨃ', 'ᨉ', '𐎤', 'ஈ',
+      'ཀ', 'ቀ', '𐤃', 'Զ', 'ⴱ', '𐒊', 'ᨊ', 'ᨌ',
+      'ጨ', 'ጰ', 'ጸ', 'ፈ', 'န', 'ᚵ', 'ᛉ', 'ত',
+      'ঠ', 'ᅯ', 'ᠬ', 'ᨅ', '𐎭', '𐎽', 'ⵅ', 'ਠ',
+      'ᬉ', 'ᮏ'
+    ];
+    const cols = 8, t = document.getElementById('t');
+    for (let i = 0; i < glyphs.length; i += cols) {
+      const r = t.insertRow();
+      for (let j = 0; j < cols; j++) {
+        r.insertCell().textContent = glyphs[i + j] || '';
+      }
+    }
+  </script>
+</body>
+</html>
